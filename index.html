@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo-16x16.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title>Agentes Secretos</title>
+  </head>
+  <body class="bg-slate-400">
+    <main class="h-screen w-screen grid grid-cols-12 grid-rows-6 gap-4 p-4">
+
+      <section class="col-span-2 row-span-6 flex flex-col">
+        <h2>Reglas</h2>
+
+        <div class="flex flex-1 py-4">
+          <textarea class="w-full h-full focus:outline-none p-2 tracking-wide" id="input-rules"></textarea>
+        </div>
+
+        <button class="block w-full px-4 bg-slate-900 hover:bg-slate-800 hover:duration-100 text-white py-2 rounded-md" id="button-generate">Generar</button>
+      </section>
+
+      <section class="col-span-2 row-span-6 flex flex-col">
+        <h2>Selecciona Regla</h2>
+
+        <div class="flex flex-1 pt-4">
+          <div class="w-full h-full focus:outline-none p-2 bg-white tracking-wide" id="rule-selector"></div>
+        </div>
+      </section>
+
+      <section class="col-span-8 row-span-6 flex flex-col">
+        <h2>Gráfica</h2>
+
+        <div class="flex py-4">
+          <canvas id="canvas" height="500" width="1200" class="bg-white"></canvas>
+        </div>
+
+        <h2>Conclusiones</h2>
+        <div class="pt-4">
+          <textarea disabled id="input-conclusions" class="p-2 w-full h-64 disabled:bg-white"></textarea>
+        </div>
+      </section>
+
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
